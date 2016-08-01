@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11163.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HairCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,525 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HairCareBg" translatesAutoresizingMaskIntoConstraints="NO" id="l8x-Ef-IXT"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add Client" translatesAutoresizingMaskIntoConstraints="NO" id="ry3-Pp-KZu">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="X9Y-Wj-8wz"/>
+                                    <constraint firstAttribute="width" constant="60" id="YgV-5e-4PZ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Manage Current Client" translatesAutoresizingMaskIntoConstraints="NO" id="Jhh-Ux-37a">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="98F-wG-7wc"/>
+                                    <constraint firstAttribute="height" constant="65" id="ve4-nP-Na6"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xve-l6-3Np">
+                                <color key="backgroundColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="b62-TR-L68"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Auy-rr-qno">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Gpm-aj-XDr"/>
+                                    <constraint firstAttribute="width" constant="343" id="nLd-6D-YjG"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="8Vi-6w-f0Q" kind="show" identifier="addClientVC" id="5Dr-Ey-Sjc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ Add Client" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CJ5-T6-A8O">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="T3G-MI-mmL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="39"/>
+                                <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7g-ba-OEw" userLabel="ManageClientsBtn">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Pt4-AU-HpX"/>
+                                    <constraint firstAttribute="width" constant="343" id="xEj-Oe-8DM"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="e6k-Hb-4GG" kind="show" identifier="ClientCell" id="e8a-Yf-Wuc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HairCareMaster" translatesAutoresizingMaskIntoConstraints="NO" id="EVJ-AQ-Ui3">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="259" id="2Rg-jK-SmW"/>
+                                    <constraint firstAttribute="height" constant="98" id="hW6-WE-d47"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mj5-Fn-SSE">
+                                <color key="backgroundColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="sLM-o8-KC2"/>
+                                    <constraint firstAttribute="height" constant="1" id="sui-0x-3Go"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage Current Client" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="5Yi-xP-3tH">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="259" id="agz-JA-dES"/>
+                                    <constraint firstAttribute="height" constant="65" id="gnM-Fx-21g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="39"/>
+                                <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="l8x-Ef-IXT" secondAttribute="bottom" id="2Lb-wT-ccp"/>
+                            <constraint firstItem="ry3-Pp-KZu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="38u-da-Wtv"/>
+                            <constraint firstItem="C7g-ba-OEw" firstAttribute="top" secondItem="xve-l6-3Np" secondAttribute="bottom" constant="24" id="3CI-P8-Uza"/>
+                            <constraint firstItem="5Yi-xP-3tH" firstAttribute="leading" secondItem="Jhh-Ux-37a" secondAttribute="trailing" constant="18" id="4vy-jU-VQ4"/>
+                            <constraint firstItem="mj5-Fn-SSE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8NI-Rn-9c2"/>
+                            <constraint firstItem="mj5-Fn-SSE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="966-Fp-6I4"/>
+                            <constraint firstItem="Jhh-Ux-37a" firstAttribute="top" secondItem="xve-l6-3Np" secondAttribute="bottom" constant="21" id="9vo-kl-rdB"/>
+                            <constraint firstItem="CJ5-T6-A8O" firstAttribute="leading" secondItem="ry3-Pp-KZu" secondAttribute="trailing" constant="8" id="BVk-2S-qRf"/>
+                            <constraint firstItem="xve-l6-3Np" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Dpm-tN-tde"/>
+                            <constraint firstItem="l8x-Ef-IXT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GOA-tt-9Uh"/>
+                            <constraint firstItem="EVJ-AQ-Ui3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GV6-Yf-eAD"/>
+                            <constraint firstItem="Auy-rr-qno" firstAttribute="top" secondItem="EVJ-AQ-Ui3" secondAttribute="bottom" constant="48" id="PPS-Aj-fAn"/>
+                            <constraint firstItem="EVJ-AQ-Ui3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QlE-Bp-dj2"/>
+                            <constraint firstItem="l8x-Ef-IXT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Sjd-eo-P2E"/>
+                            <constraint firstItem="CJ5-T6-A8O" firstAttribute="top" secondItem="EVJ-AQ-Ui3" secondAttribute="bottom" constant="48" id="evD-gk-Zaz"/>
+                            <constraint firstItem="Jhh-Ux-37a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="ncY-Jh-X0f"/>
+                            <constraint firstItem="C7g-ba-OEw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ngQ-HY-PWB"/>
+                            <constraint firstItem="ry3-Pp-KZu" firstAttribute="top" secondItem="EVJ-AQ-Ui3" secondAttribute="bottom" constant="48" id="oqa-nf-mA8"/>
+                            <constraint firstItem="5Yi-xP-3tH" firstAttribute="top" secondItem="xve-l6-3Np" secondAttribute="bottom" constant="21" id="pQD-od-I0m"/>
+                            <constraint firstItem="CJ5-T6-A8O" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pa0-ae-eri"/>
+                            <constraint firstAttribute="trailing" secondItem="l8x-Ef-IXT" secondAttribute="trailing" id="t1W-6B-42U"/>
+                            <constraint firstItem="xve-l6-3Np" firstAttribute="top" secondItem="CJ5-T6-A8O" secondAttribute="bottom" constant="30" id="ueN-Gj-eUm"/>
+                            <constraint firstItem="xve-l6-3Np" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="urE-XB-Vlq"/>
+                            <constraint firstItem="mj5-Fn-SSE" firstAttribute="top" secondItem="5Yi-xP-3tH" secondAttribute="bottom" constant="21" id="vnz-bD-7z6"/>
+                            <constraint firstItem="Auy-rr-qno" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xd4-ym-Pp6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addClientBtn" destination="Auy-rr-qno" id="kUW-VS-wKH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="88.605697151424295"/>
+        </scene>
+        <!--Add ClientVC-->
+        <scene sceneID="Ejj-yj-cWz">
+            <objects>
+                <viewController id="8Vi-6w-f0Q" customClass="addClientVC" customModule="HairCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q8v-Hu-lW5"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Pp-yP-iZT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tAc-La-AcJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HairCareBg" translatesAutoresizingMaskIntoConstraints="NO" id="yAU-Wa-dm2"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ Add Client" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="wr5-Lr-tyB">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Ypr-rB-WIb"/>
+                                    <constraint firstAttribute="width" constant="200" id="url-e5-ipb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="60"/>
+                                <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSU-du-fr0">
+                                <color key="backgroundColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="sKN-FJ-x6G"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clients Full Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JKe-MV-BY8">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5uk-Oi-aNK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZU-Kv-rtw">
+                                <color key="backgroundColor" white="1" alpha="0.2494073275862069" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="CUX-Ms-Nzd"/>
+                                    <constraint firstAttribute="width" constant="160" id="hW2-Jm-c28"/>
+                                </constraints>
+                                <state key="normal" image="2xAdd Client"/>
+                                <connections>
+                                    <action selector="addClientPressed:" destination="8Vi-6w-f0Q" eventType="touchUpInside" id="TOk-mt-i5Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcK-Rf-zou">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PeY-6N-yxz"/>
+                                    <constraint firstAttribute="width" constant="63" id="Uum-tC-DNu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="16"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtnPressed:" destination="8Vi-6w-f0Q" eventType="touchUpInside" id="Eys-ji-QB0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yAU-Wa-dm2" firstAttribute="top" secondItem="tAc-La-AcJ" secondAttribute="top" id="Jhx-fJ-hwv"/>
+                            <constraint firstItem="uSU-du-fr0" firstAttribute="trailing" secondItem="tAc-La-AcJ" secondAttribute="trailingMargin" id="JqE-7S-xsx"/>
+                            <constraint firstItem="7Pp-yP-iZT" firstAttribute="top" secondItem="yAU-Wa-dm2" secondAttribute="bottom" id="MA7-5t-9Fk"/>
+                            <constraint firstItem="JKe-MV-BY8" firstAttribute="leading" secondItem="tAc-La-AcJ" secondAttribute="leadingMargin" id="NX1-7K-SqM"/>
+                            <constraint firstItem="OZU-Kv-rtw" firstAttribute="top" secondItem="JKe-MV-BY8" secondAttribute="bottom" constant="71" id="Ny4-k6-2Ep"/>
+                            <constraint firstItem="JKe-MV-BY8" firstAttribute="trailing" secondItem="tAc-La-AcJ" secondAttribute="trailingMargin" id="Pi1-iG-0su"/>
+                            <constraint firstItem="wr5-Lr-tyB" firstAttribute="centerX" secondItem="tAc-La-AcJ" secondAttribute="centerX" id="gF1-7q-tzE"/>
+                            <constraint firstItem="EcK-Rf-zou" firstAttribute="top" secondItem="Q8v-Hu-lW5" secondAttribute="bottom" id="gHv-0v-J57"/>
+                            <constraint firstItem="wr5-Lr-tyB" firstAttribute="top" secondItem="Q8v-Hu-lW5" secondAttribute="bottom" id="kBl-oE-GYu"/>
+                            <constraint firstItem="EcK-Rf-zou" firstAttribute="leading" secondItem="tAc-La-AcJ" secondAttribute="leadingMargin" id="la8-hj-064"/>
+                            <constraint firstAttribute="trailing" secondItem="yAU-Wa-dm2" secondAttribute="trailing" id="lk6-Z4-TEx"/>
+                            <constraint firstItem="JKe-MV-BY8" firstAttribute="top" secondItem="uSU-du-fr0" secondAttribute="bottom" constant="122" id="o8M-XF-vVk"/>
+                            <constraint firstItem="OZU-Kv-rtw" firstAttribute="centerX" secondItem="tAc-La-AcJ" secondAttribute="centerX" id="vU1-Mc-W1A"/>
+                            <constraint firstItem="yAU-Wa-dm2" firstAttribute="leading" secondItem="tAc-La-AcJ" secondAttribute="leading" id="wQ6-9l-E6p"/>
+                            <constraint firstItem="uSU-du-fr0" firstAttribute="leading" secondItem="tAc-La-AcJ" secondAttribute="leadingMargin" id="wRr-fY-LzG"/>
+                            <constraint firstItem="uSU-du-fr0" firstAttribute="top" secondItem="wr5-Lr-tyB" secondAttribute="bottom" constant="8" id="wTR-dg-HKf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addClientBtn" destination="OZU-Kv-rtw" id="faW-uM-AWi"/>
+                        <outlet property="clientName" destination="JKe-MV-BY8" id="r4p-uD-ES9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NzS-DY-HhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="-574.36281859070471"/>
+        </scene>
+        <!--ClientVC-->
+        <scene sceneID="hss-n5-Q3N">
+            <objects>
+                <viewController id="e6k-Hb-4GG" customClass="ClientVC" customModule="HairCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8hv-ch-1z7"/>
+                        <viewControllerLayoutGuide type="bottom" id="5c6-TH-8n5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JAY-T2-OAM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HairCareBg" translatesAutoresizingMaskIntoConstraints="NO" id="xar-HM-uvo"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="LBV-6Z-gV2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="4NN-8t-Lwz"/>
+                                    <constraint firstAttribute="height" constant="49" id="dwz-Tn-dpy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="60"/>
+                                <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMV-WN-JqS">
+                                <color key="backgroundColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="pWD-So-JtC"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HTm-VE-kYo">
+                                <color key="backgroundColor" white="1" alpha="0.25212823275862067" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClientCell" rowHeight="75" id="LKq-Yf-bsE" customClass="ClientCell" customModule="HairCare" customModuleProvider="target">
+                                        <frame key="frameInset" minY="28" width="343" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LKq-Yf-bsE" id="Wp0-gJ-oXy">
+                                            <frame key="frameInset" width="343" height="74"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kelsey Brewer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="XII-5P-nOB">
+                                                    <frame key="frameInset" minX="8" minY="8" width="327" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="28"/>
+                                                    <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="XII-5P-nOB" id="ef9-8A-apb"/>
+                                            <segue destination="ezK-4O-OP0" kind="show" identifier="ClientInfoCell" id="wc4-Te-VoZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SMV-WN-JqS" firstAttribute="leading" secondItem="JAY-T2-OAM" secondAttribute="leadingMargin" id="4qV-8S-cjP"/>
+                            <constraint firstItem="SMV-WN-JqS" firstAttribute="trailing" secondItem="JAY-T2-OAM" secondAttribute="trailingMargin" id="Ajq-tf-nMR"/>
+                            <constraint firstItem="5c6-TH-8n5" firstAttribute="top" secondItem="HTm-VE-kYo" secondAttribute="bottom" constant="8" id="EbO-T9-WAO"/>
+                            <constraint firstItem="xar-HM-uvo" firstAttribute="top" secondItem="JAY-T2-OAM" secondAttribute="top" id="Fve-PJ-wo3"/>
+                            <constraint firstItem="xar-HM-uvo" firstAttribute="leading" secondItem="JAY-T2-OAM" secondAttribute="leading" id="NNf-m7-zkW"/>
+                            <constraint firstItem="HTm-VE-kYo" firstAttribute="leading" secondItem="JAY-T2-OAM" secondAttribute="leadingMargin" id="QEx-cG-JyZ"/>
+                            <constraint firstItem="HTm-VE-kYo" firstAttribute="trailing" secondItem="JAY-T2-OAM" secondAttribute="trailingMargin" id="UW3-EM-gXR"/>
+                            <constraint firstItem="5c6-TH-8n5" firstAttribute="top" secondItem="xar-HM-uvo" secondAttribute="bottom" id="XsF-5u-BpW"/>
+                            <constraint firstItem="HTm-VE-kYo" firstAttribute="top" secondItem="SMV-WN-JqS" secondAttribute="bottom" constant="8" id="gtb-vq-CKS"/>
+                            <constraint firstItem="LBV-6Z-gV2" firstAttribute="centerX" secondItem="JAY-T2-OAM" secondAttribute="centerX" id="hFJ-zQ-hLf"/>
+                            <constraint firstItem="SMV-WN-JqS" firstAttribute="top" secondItem="LBV-6Z-gV2" secondAttribute="bottom" constant="8" id="nSe-DE-Him"/>
+                            <constraint firstItem="LBV-6Z-gV2" firstAttribute="top" secondItem="8hv-ch-1z7" secondAttribute="bottom" id="qGc-14-IcF"/>
+                            <constraint firstAttribute="trailing" secondItem="xar-HM-uvo" secondAttribute="trailing" id="wke-FP-7Jz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="HTm-VE-kYo" id="veo-4c-ri4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FRz-F4-VGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="88.605697151424295"/>
+        </scene>
+        <!--Client InfoVC-->
+        <scene sceneID="ePB-2G-XzT">
+            <objects>
+                <viewController id="ezK-4O-OP0" customClass="ClientInfoVC" customModule="HairCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="spz-FT-3aR"/>
+                        <viewControllerLayoutGuide type="bottom" id="d08-B4-2Mp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pS4-OV-ZZN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HairCareBg" translatesAutoresizingMaskIntoConstraints="NO" id="Ss5-t1-C0R"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="350" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A6j-ZT-0yA">
+                                <frame key="frameInset" minX="16" minY="110" width="343" height="446"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClientInfoCell" rowHeight="350" id="dlV-G8-IB7" customClass="ClientInfoCell" customModule="HairCare" customModuleProvider="target">
+                                        <frame key="frameInset" minY="28" width="343" height="350"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="dlV-G8-IB7" id="0d9-lg-zJ4">
+                                            <frame key="frameInset" width="343" height="349"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="hairgirl" translatesAutoresizingMaskIntoConstraints="NO" id="YOt-11-fYC">
+                                                    <frame key="frameInset" minX="8" minY="8" width="160" height="160"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="160" id="dhW-uf-Oix"/>
+                                                        <constraint firstAttribute="width" constant="160" id="hE3-GX-mxJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="676-wb-riA">
+                                                    <frame key="frameInset" minX="8" minY="176" width="327" height="166"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="166" id="BOv-KA-vIS"/>
+                                                    </constraints>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZv-I5-3sn">
+                                                    <frame key="frameInset" minX="176" minY="8" width="159" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="38" id="8hK-jX-9rk"/>
+                                                        <constraint firstAttribute="width" constant="159" id="iEN-iq-buh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="25"/>
+                                                    <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YOt-11-fYC" firstAttribute="leading" secondItem="0d9-lg-zJ4" secondAttribute="leadingMargin" id="0Sn-dO-onc"/>
+                                                <constraint firstItem="676-wb-riA" firstAttribute="trailing" secondItem="0d9-lg-zJ4" secondAttribute="trailingMargin" id="1oW-jD-3ob"/>
+                                                <constraint firstItem="676-wb-riA" firstAttribute="leading" secondItem="0d9-lg-zJ4" secondAttribute="leadingMargin" id="Ij8-18-15S"/>
+                                                <constraint firstItem="rZv-I5-3sn" firstAttribute="top" secondItem="0d9-lg-zJ4" secondAttribute="topMargin" id="LYf-uG-x9Q"/>
+                                                <constraint firstItem="676-wb-riA" firstAttribute="bottom" secondItem="0d9-lg-zJ4" secondAttribute="bottomMargin" id="XwX-GX-92Q"/>
+                                                <constraint firstItem="676-wb-riA" firstAttribute="top" secondItem="YOt-11-fYC" secondAttribute="bottom" constant="8" id="Ywx-uY-jsH"/>
+                                                <constraint firstItem="rZv-I5-3sn" firstAttribute="leading" secondItem="YOt-11-fYC" secondAttribute="trailing" constant="8" id="fT4-IC-BYF"/>
+                                                <constraint firstItem="YOt-11-fYC" firstAttribute="top" secondItem="0d9-lg-zJ4" secondAttribute="topMargin" id="lvO-bK-p1r"/>
+                                                <constraint firstItem="rZv-I5-3sn" firstAttribute="trailing" secondItem="0d9-lg-zJ4" secondAttribute="trailingMargin" id="uc3-Jf-hF1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="clientDesc" destination="676-wb-riA" id="f7T-La-deA"/>
+                                            <outlet property="clientImage" destination="YOt-11-fYC" id="TeF-T7-FVy"/>
+                                            <outlet property="clientName" destination="sMs-Bp-bCh" id="dlc-iU-Bp9"/>
+                                            <outlet property="dateText" destination="rZv-I5-3sn" id="aC6-px-Xov"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="sMs-Bp-bCh">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="xQ2-O0-xP0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="60"/>
+                                <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xH-cZ-Nfk">
+                                <frame key="frameInset" minX="16" minY="582" width="343" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="60"/>
+                                <state key="normal" title="Add Post">
+                                    <color key="titleColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPostPressed:" destination="ezK-4O-OP0" eventType="touchUpInside" id="ze8-iz-MQn"/>
+                                    <segue destination="0qd-kf-cEp" kind="show" identifier="AddingClientInfo" id="20F-Uu-qlf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sMs-Bp-bCh" firstAttribute="leading" secondItem="pS4-OV-ZZN" secondAttribute="leadingMargin" id="0fK-fb-CYZ"/>
+                            <constraint firstItem="Ss5-t1-C0R" firstAttribute="leading" secondItem="pS4-OV-ZZN" secondAttribute="leading" id="IWY-Cq-XTW"/>
+                            <constraint firstItem="sMs-Bp-bCh" firstAttribute="trailing" secondItem="pS4-OV-ZZN" secondAttribute="trailingMargin" id="LyR-FT-oPp"/>
+                            <constraint firstItem="Ss5-t1-C0R" firstAttribute="top" secondItem="pS4-OV-ZZN" secondAttribute="top" id="TbU-CV-fBX"/>
+                            <constraint firstAttribute="trailing" secondItem="Ss5-t1-C0R" secondAttribute="trailing" id="WHX-OO-HXj"/>
+                            <constraint firstItem="d08-B4-2Mp" firstAttribute="top" secondItem="Ss5-t1-C0R" secondAttribute="bottom" id="dsy-Yl-HtW"/>
+                            <constraint firstItem="sMs-Bp-bCh" firstAttribute="top" secondItem="spz-FT-3aR" secondAttribute="bottom" id="kuF-P3-E0L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addPostBtn" destination="2xH-cZ-Nfk" id="XCf-XV-rcB"/>
+                        <outlet property="tableView" destination="A6j-ZT-0yA" id="fwl-ze-48g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EBQ-nb-WTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1544.8" y="88.605697151424295"/>
+        </scene>
+        <!--Adding ClientinfoVC-->
+        <scene sceneID="2KI-nz-ffO">
+            <objects>
+                <viewController id="0qd-kf-cEp" customClass="addingClientinfoVC" customModule="HairCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kcs-dd-4pR"/>
+                        <viewControllerLayoutGuide type="bottom" id="2mX-pF-047"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eLa-4p-TII">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HairCareBg" translatesAutoresizingMaskIntoConstraints="NO" id="p7h-mb-zt0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="elx-FG-yw7">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="Sht-Dv-Vxc"/>
+                                    <constraint firstAttribute="height" constant="59" id="T87-fe-XPv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-BookIta" family="Bodoni 72" pointSize="60"/>
+                                <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bh-ii-fYT">
+                                <color key="backgroundColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="prV-dI-7Lg"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htL-0f-lt9" userLabel="Select Picture">
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="28"/>
+                                <state key="normal" title="+ Select Picture">
+                                    <color key="titleColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectPicture:" destination="0qd-kf-cEp" eventType="touchUpInside" id="fJ3-J3-7fM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krJ-h2-r51">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="1zm-jc-ChK"/>
+                                    <constraint firstAttribute="width" constant="200" id="a8p-Vg-v0Z"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Today's Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y8z-S8-gy1">
+                                <frame key="frameInset" minX="45" minY="345" width="286" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJA-6Z-8qV">
+                                <frame key="frameInset" minX="45" minY="415" width="286" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGJ-Nm-WSd">
+                                <frame key="frameInset" minX="16" minY="519" width="343" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="60"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="postBtnPressed:" destination="0qd-kf-cEp" eventType="touchUpInside" id="NSY-gK-T34"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCA-ng-KSH">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6YX-ff-n3w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="40"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtnPressed:" destination="8Vi-6w-f0Q" eventType="touchUpInside" id="gkJ-Yo-IyU"/>
+                                    <action selector="cancelPressed:" destination="0qd-kf-cEp" eventType="touchUpInside" id="SOv-wz-Drw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="htL-0f-lt9" firstAttribute="height" secondItem="krJ-h2-r51" secondAttribute="height" id="3YS-tl-sKg"/>
+                            <constraint firstItem="ZCA-ng-KSH" firstAttribute="leading" secondItem="eLa-4p-TII" secondAttribute="leadingMargin" id="5Ta-61-IZu"/>
+                            <constraint firstAttribute="trailing" secondItem="p7h-mb-zt0" secondAttribute="trailing" id="77O-GS-eYm"/>
+                            <constraint firstItem="3bh-ii-fYT" firstAttribute="trailing" secondItem="eLa-4p-TII" secondAttribute="trailingMargin" id="Aio-jJ-aYw"/>
+                            <constraint firstItem="p7h-mb-zt0" firstAttribute="top" secondItem="eLa-4p-TII" secondAttribute="top" id="B5W-IX-3YU"/>
+                            <constraint firstItem="2mX-pF-047" firstAttribute="top" secondItem="ZCA-ng-KSH" secondAttribute="bottom" constant="20" id="FM3-lK-2Tc"/>
+                            <constraint firstItem="3bh-ii-fYT" firstAttribute="top" secondItem="elx-FG-yw7" secondAttribute="bottom" constant="8" id="FpY-dd-4Oh"/>
+                            <constraint firstItem="ZCA-ng-KSH" firstAttribute="trailing" secondItem="eLa-4p-TII" secondAttribute="trailingMargin" id="GfZ-EG-3df"/>
+                            <constraint firstItem="htL-0f-lt9" firstAttribute="centerX" secondItem="krJ-h2-r51" secondAttribute="centerX" id="MGq-7O-dDt"/>
+                            <constraint firstItem="elx-FG-yw7" firstAttribute="centerX" secondItem="eLa-4p-TII" secondAttribute="centerX" id="Vs4-VD-uxR"/>
+                            <constraint firstItem="krJ-h2-r51" firstAttribute="centerX" secondItem="eLa-4p-TII" secondAttribute="centerX" id="Vxa-0O-DkG"/>
+                            <constraint firstItem="htL-0f-lt9" firstAttribute="width" secondItem="krJ-h2-r51" secondAttribute="width" id="bGo-gD-1Ur"/>
+                            <constraint firstItem="krJ-h2-r51" firstAttribute="top" secondItem="3bh-ii-fYT" secondAttribute="bottom" constant="32" id="dcO-rA-dhZ"/>
+                            <constraint firstItem="htL-0f-lt9" firstAttribute="centerY" secondItem="krJ-h2-r51" secondAttribute="centerY" id="ddh-c4-pvk"/>
+                            <constraint firstItem="elx-FG-yw7" firstAttribute="top" secondItem="kcs-dd-4pR" secondAttribute="bottom" id="fe2-Kq-urb"/>
+                            <constraint firstItem="3bh-ii-fYT" firstAttribute="leading" secondItem="eLa-4p-TII" secondAttribute="leadingMargin" id="nF6-pl-AQd"/>
+                            <constraint firstItem="p7h-mb-zt0" firstAttribute="leading" secondItem="eLa-4p-TII" secondAttribute="leading" id="qFz-Si-YAt"/>
+                            <constraint firstItem="2mX-pF-047" firstAttribute="top" secondItem="p7h-mb-zt0" secondAttribute="bottom" id="wvb-uj-hgI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="ZCA-ng-KSH" id="MMa-UV-1lh"/>
+                        <outlet property="clientImage" destination="krJ-h2-r51" id="U5c-bU-61j"/>
+                        <outlet property="dateTxt" destination="Y8z-S8-gy1" id="PDd-wz-ff9"/>
+                        <outlet property="postBtn" destination="mGJ-Nm-WSd" id="vMF-Ji-zYo"/>
+                        <outlet property="productInfo" destination="eJA-6Z-8qV" id="6Oo-2S-tEF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xG7-7q-nKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2188" y="59.820089955022496"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="2xAdd Client" width="120" height="120"/>
+        <image name="Add Client" width="60" height="60"/>
+        <image name="HairCareBg" width="375" height="667"/>
+        <image name="HairCareMaster" width="243" height="98"/>
+        <image name="Manage Current Client" width="39" height="65"/>
+        <image name="hairgirl" width="320" height="448"/>
+    </resources>
 </document>
