@@ -12,6 +12,9 @@
 		C695E0531D4DF5BC009947A7 /* addingClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E0521D4DF5BC009947A7 /* addingClientVC.swift */; };
 		C695E0561D4DFBD9009947A7 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E0551D4DFBD9009947A7 /* DataServices.swift */; };
 		C695E0581D4F0061009947A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C695E0571D4F0061009947A7 /* GoogleService-Info.plist */; };
+		C695E05A1D5032A9009947A7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E0591D5032A9009947A7 /* LoginVC.swift */; };
+		C695E05C1D5032E7009947A7 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E05B1D5032E7009947A7 /* FancyView.swift */; };
+		C695E05E1D5034E9009947A7 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E05D1D5034E9009947A7 /* FancyButton.swift */; };
 		C6E88A811D4D85C5002B1E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88A801D4D85C5002B1E2B /* AppDelegate.swift */; };
 		C6E88A831D4D85C5002B1E2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88A821D4D85C5002B1E2B /* ViewController.swift */; };
 		C6E88A861D4D85C5002B1E2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E88A841D4D85C5002B1E2B /* Main.storyboard */; };
@@ -53,6 +56,9 @@
 		C695E0521D4DF5BC009947A7 /* addingClientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addingClientVC.swift; sourceTree = "<group>"; };
 		C695E0551D4DFBD9009947A7 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		C695E0571D4F0061009947A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C695E0591D5032A9009947A7 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C695E05B1D5032E7009947A7 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		C695E05D1D5034E9009947A7 /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 		C6E88A7D1D4D85C5002B1E2B /* HairCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HairCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E88A801D4D85C5002B1E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6E88A821D4D85C5002B1E2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,7 +144,6 @@
 				C6E88AB31D4DB52A002B1E2B /* Model */,
 				C6E88AB21D4DB524002B1E2B /* View */,
 				C6E88AB11D4DB51B002B1E2B /* Controller */,
-				C6E88A801D4D85C5002B1E2B /* AppDelegate.swift */,
 				C6E88A8A1D4D85C5002B1E2B /* Assets.xcassets */,
 				C6E88A8C1D4D85C5002B1E2B /* LaunchScreen.storyboard */,
 				C6E88A8F1D4D85C5002B1E2B /* Info.plist */,
@@ -169,10 +174,9 @@
 		C6E88AB11D4DB51B002B1E2B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C6E88ABF1D4DDE68002B1E2B /* ClientInfoVC.swift */,
-				C695E0501D4DE6B6009947A7 /* ClientInfoCell.swift */,
-				C6E88AB81D4DC2AA002B1E2B /* ClientInfo.swift */,
-				C695E0521D4DF5BC009947A7 /* addingClientVC.swift */,
+				C6E88A801D4D85C5002B1E2B /* AppDelegate.swift */,
+				C695E05B1D5032E7009947A7 /* FancyView.swift */,
+				C695E05D1D5034E9009947A7 /* FancyButton.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -180,7 +184,13 @@
 		C6E88AB21D4DB524002B1E2B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C6E88ABD1D4DD1B7002B1E2B /* addClientVC.swift */,
+				C6E88A821D4D85C5002B1E2B /* ViewController.swift */,
+				C6E88AB61D4DBD01002B1E2B /* ClientVC.swift */,
+				C6E88ABF1D4DDE68002B1E2B /* ClientInfoVC.swift */,
+				C695E0521D4DF5BC009947A7 /* addingClientVC.swift */,
 				C6E88A841D4D85C5002B1E2B /* Main.storyboard */,
+				C695E0591D5032A9009947A7 /* LoginVC.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -188,9 +198,9 @@
 		C6E88AB31D4DB52A002B1E2B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C695E0501D4DE6B6009947A7 /* ClientInfoCell.swift */,
+				C6E88AB81D4DC2AA002B1E2B /* ClientInfo.swift */,
 				C6E88ABA1D4DC7F9002B1E2B /* ClientPage */,
-				C6E88A821D4D85C5002B1E2B /* ViewController.swift */,
-				C6E88ABD1D4DD1B7002B1E2B /* addClientVC.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -198,7 +208,6 @@
 		C6E88ABA1D4DC7F9002B1E2B /* ClientPage */ = {
 			isa = PBXGroup;
 			children = (
-				C6E88AB61D4DBD01002B1E2B /* ClientVC.swift */,
 				C6E88ABB1D4DC85E002B1E2B /* ClientCell.swift */,
 				C6E88AB41D4DB551002B1E2B /* Client.swift */,
 			);
@@ -423,8 +432,11 @@
 				C6E88AB71D4DBD01002B1E2B /* ClientVC.swift in Sources */,
 				C6E88ABE1D4DD1B7002B1E2B /* addClientVC.swift in Sources */,
 				C6E88AC01D4DDE68002B1E2B /* ClientInfoVC.swift in Sources */,
+				C695E05E1D5034E9009947A7 /* FancyButton.swift in Sources */,
+				C695E05A1D5032A9009947A7 /* LoginVC.swift in Sources */,
 				C6E88AB51D4DB551002B1E2B /* Client.swift in Sources */,
 				C695E0511D4DE6B6009947A7 /* ClientInfoCell.swift in Sources */,
+				C695E05C1D5032E7009947A7 /* FancyView.swift in Sources */,
 				C6E88A811D4D85C5002B1E2B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

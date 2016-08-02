@@ -17,15 +17,9 @@ class ClientInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addPostBtn.layer.cornerRadius = 33
-        addPostBtn.layer.masksToBounds = true
-        
         tableView.delegate = self
         tableView.dataSource = self
         
-        DataServices.instance.loadPost()
-     
-        NotificationCenter.default.addObserver(self, selector: Selector(("onPostsLoaded:")), name: "postsLoaded" as NSNotification.Name, object: nil)
         
     }
     
@@ -34,23 +28,11 @@ class ClientInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let clientsInfo = DataServices.instance.loadedPosts[indexPath.row]
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "ClientInfoCell") as? ClientInfoCell {
-            cell.configureCell(info: clientsInfo)
-            return cell
-            
-        } else {
-            let cell = ClientInfoCell()
-            cell.configureCell(info: clientsInfo)
-            return cell
-        }
-
-        
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataServices.instance.loadedPosts.count
+       return 3
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -61,9 +43,9 @@ class ClientInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
     }
     
-    func onPostsLoaded(notif: AnyObject) {
-        tableView.reloadData()
-    }
+//    func onPostsLoaded(notif: AnyObject) {
+//        tableView.reloadData()
+//    }
     
     
 

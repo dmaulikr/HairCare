@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class addClientVC: UIViewController {
     
@@ -22,11 +23,14 @@ class addClientVC: UIViewController {
     }
     
     @IBAction func addClientPressed(_ sender: UIButton) {
+        
         if let name = clientName.text {
-            let post = Client(name: name)
-            DataServices.instance.addClient(clientName: post)
-            dismiss(animated: true, completion: nil)
+//            DataServices.instance.createFirebaseDBUser(uid: id, name: name)
             
+//            let post = Client(name: name)
+//            DataServices.instance.addClient(clientName: post)
+//            dismiss(animated: true, completion: nil)
+//            
         }
         
         

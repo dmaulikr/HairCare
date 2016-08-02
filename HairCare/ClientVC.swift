@@ -20,10 +20,6 @@ class ClientVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
-        DataServices.instance.loadClient()
-        
-        NotificationCenter.default.addObserver(self, selector: Selector(("onPostsLoaded:")), name: "postsLoaded" as NSNotification.Name, object: nil)
-        
 
     }
     
@@ -54,12 +50,6 @@ class ClientVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return clients.count
     }
     
-    func onPostsLoaded(notif: AnyObject) {
-        tableView.reloadData()
-    }
-
-    
-
 }
     
 

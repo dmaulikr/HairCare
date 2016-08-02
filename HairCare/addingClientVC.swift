@@ -37,21 +37,20 @@ class addingClientinfoVC: UIViewController, UIImagePickerControllerDelegate, UIN
 
     @IBAction func postBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
-        if let date = dateTxt.text, let desc = productInfo.text, let img = clientImage.image {
-            
-            let imgPath = DataServices.instance.saveImageAndCreatePath(image: img)
-            
-            let post = ClientInfo(name: "", date: date, info: desc, image: imgPath)
-            DataServices.instance.addPost(client: post)
-            
-            
-        }
     }
+//        if let date = dateTxt.text, let desc = productInfo.text, let img = clientImage.image {
+//            
+//            let imgPath = DataServices.instance.saveImageAndCreatePath(image: img)
+//            
+//            let post = ClientInfo(name: "", date: date, info: desc, image: imgPath)
+//            DataServices.instance.addPost(client: post)
+        
+            
     
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo image: UIImage) {
-        imagePicker.dismiss(animated: true, completion: nil)
-        clientImage.image = image
-    }
+//    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo image: UIImage) {
+//        imagePicker.dismiss(animated: true, completion: nil)
+//        clientImage.image = image
+//    }
     @IBAction func cancelPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }

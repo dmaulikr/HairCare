@@ -21,11 +21,11 @@ class ClientInfoCell: UITableViewCell {
         
     }
     
-    func configureCell(info: ClientInfo) {
-        clientName.text = info.name
-        clientImage.image = DataServices.instance.imageForPath(path: info.imagePath!)
-        dateText.text = info.currentDate
-        clientDesc.text = info.productInfo
-    }
+//    func configureCell(info: ClientInfo) {
+//        clientName.text = info.name
+//        clientImage.image = DataServices.instance.imageForPath(path: info.imagePath!)
+//        dateText.text = info.currentDate
+//        clientDesc.text = info.productInfo
+//    }
 
 }

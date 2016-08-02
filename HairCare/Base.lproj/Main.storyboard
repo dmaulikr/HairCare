@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11163.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11163.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HKL-jb-Kep">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
@@ -7,6 +7,135 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--LoginVC-->
+        <scene sceneID="P9h-Nz-XNc">
+            <objects>
+                <viewController id="HKL-jb-Kep" customClass="LoginVC" customModule="HairCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NCb-CV-dah"/>
+                        <viewControllerLayoutGuide type="bottom" id="b8D-Qn-9wl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5zo-rX-Y0W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HairCareBg" translatesAutoresizingMaskIntoConstraints="NO" id="N6S-jn-obn"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HairCareMaster" translatesAutoresizingMaskIntoConstraints="NO" id="8Jd-Mc-guK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="259" id="1CU-fJ-Mfg"/>
+                                    <constraint firstAttribute="height" constant="98" id="AXV-i6-KcB"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCI-76-bYT" customClass="FancyView" customModule="HairCare" customModuleProvider="target">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login / SignUp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch4-Z2-IX4">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="154" id="HJH-bg-QEV"/>
+                                            <constraint firstAttribute="height" constant="33" id="WFw-hR-t9b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="22"/>
+                                        <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="0.75" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.87450980392156863" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Bjm-1h-QNn"/>
+                                    <constraint firstItem="ch4-Z2-IX4" firstAttribute="leading" secondItem="JCI-76-bYT" secondAttribute="leading" constant="8" id="Har-eD-4w9"/>
+                                    <constraint firstAttribute="bottom" secondItem="ch4-Z2-IX4" secondAttribute="bottom" constant="8" id="V2I-SL-uQx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBI-Xl-8Mt" customClass="FancyView" customModule="HairCare" customModuleProvider="target">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ws-1Y-itz">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="G45-PR-aez"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P9i-j4-AEj">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="2sc-Jd-BVM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OY6-da-s2e">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="qEv-iV-hOe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="19"/>
+                                        <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="0.75" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujc-0w-ktM">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="oIV-wj-uMc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="19"/>
+                                        <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="0.75" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3w-IX-Jfb" customClass="FancyButton" customModule="HairCare" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="NE6-aB-Oq8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="50"/>
+                                        <state key="normal" title="Enter Here">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addPostPressed:" destination="ezK-4O-OP0" eventType="touchUpInside" id="NPD-zC-Hj6"/>
+                                            <action selector="enterHerePressed:" destination="HKL-jb-Kep" eventType="touchUpInside" id="ZaB-00-3gr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.87450980392156863" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="j3w-IX-Jfb" secondAttribute="bottom" constant="30" id="Cq9-GY-7Pa"/>
+                                    <constraint firstItem="P9i-j4-AEj" firstAttribute="top" secondItem="ujc-0w-ktM" secondAttribute="bottom" constant="8" id="Ddq-tt-lBF"/>
+                                    <constraint firstItem="OY6-da-s2e" firstAttribute="top" secondItem="FBI-Xl-8Mt" secondAttribute="top" constant="30" id="FOF-zz-Bgg"/>
+                                    <constraint firstItem="OY6-da-s2e" firstAttribute="leading" secondItem="FBI-Xl-8Mt" secondAttribute="leading" constant="8" id="Gev-B3-RMQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="P9i-j4-AEj" secondAttribute="trailing" constant="8" id="OeD-oB-DYq"/>
+                                    <constraint firstItem="5Ws-1Y-itz" firstAttribute="leading" secondItem="FBI-Xl-8Mt" secondAttribute="leading" constant="8" id="QJ4-Fc-7yh"/>
+                                    <constraint firstItem="j3w-IX-Jfb" firstAttribute="leading" secondItem="FBI-Xl-8Mt" secondAttribute="leading" constant="8" id="aDy-1V-VFJ"/>
+                                    <constraint firstItem="5Ws-1Y-itz" firstAttribute="top" secondItem="OY6-da-s2e" secondAttribute="bottom" constant="8" id="aL6-oD-kg2"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Ws-1Y-itz" secondAttribute="trailing" constant="8" id="aOb-OB-iOD"/>
+                                    <constraint firstItem="ujc-0w-ktM" firstAttribute="leading" secondItem="FBI-Xl-8Mt" secondAttribute="leading" constant="8" id="ecv-vt-rwS"/>
+                                    <constraint firstItem="ujc-0w-ktM" firstAttribute="top" secondItem="5Ws-1Y-itz" secondAttribute="bottom" constant="30" id="hL9-a1-PyW"/>
+                                    <constraint firstItem="P9i-j4-AEj" firstAttribute="leading" secondItem="FBI-Xl-8Mt" secondAttribute="leading" constant="8" id="hZb-Tz-P4g"/>
+                                    <constraint firstAttribute="trailing" secondItem="j3w-IX-Jfb" secondAttribute="trailing" constant="8" id="m2X-Mb-nPw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FBI-Xl-8Mt" firstAttribute="top" secondItem="JCI-76-bYT" secondAttribute="bottom" constant="8" id="0Ru-AV-k1Y"/>
+                            <constraint firstItem="b8D-Qn-9wl" firstAttribute="top" secondItem="N6S-jn-obn" secondAttribute="bottom" id="2tC-1P-z7v"/>
+                            <constraint firstItem="JCI-76-bYT" firstAttribute="trailing" secondItem="5zo-rX-Y0W" secondAttribute="trailingMargin" id="5SO-6I-KEE"/>
+                            <constraint firstItem="N6S-jn-obn" firstAttribute="top" secondItem="5zo-rX-Y0W" secondAttribute="top" id="B6o-Tn-0XL"/>
+                            <constraint firstItem="FBI-Xl-8Mt" firstAttribute="trailing" secondItem="5zo-rX-Y0W" secondAttribute="trailingMargin" id="Dfn-1z-7CK"/>
+                            <constraint firstAttribute="trailing" secondItem="N6S-jn-obn" secondAttribute="trailing" id="Obr-dQ-0tL"/>
+                            <constraint firstItem="8Jd-Mc-guK" firstAttribute="top" secondItem="NCb-CV-dah" secondAttribute="bottom" constant="8" id="OfN-d2-Wka"/>
+                            <constraint firstItem="JCI-76-bYT" firstAttribute="top" secondItem="8Jd-Mc-guK" secondAttribute="bottom" constant="8" id="UYk-HH-jYc"/>
+                            <constraint firstItem="N6S-jn-obn" firstAttribute="leading" secondItem="5zo-rX-Y0W" secondAttribute="leading" id="cc0-sR-4qv"/>
+                            <constraint firstItem="8Jd-Mc-guK" firstAttribute="centerX" secondItem="5zo-rX-Y0W" secondAttribute="centerX" id="lBd-yd-tZu"/>
+                            <constraint firstItem="FBI-Xl-8Mt" firstAttribute="leading" secondItem="5zo-rX-Y0W" secondAttribute="leadingMargin" id="qwA-Em-2bV"/>
+                            <constraint firstItem="JCI-76-bYT" firstAttribute="leading" secondItem="5zo-rX-Y0W" secondAttribute="leadingMargin" id="rd4-XZ-yRg"/>
+                            <constraint firstItem="b8D-Qn-9wl" firstAttribute="top" secondItem="FBI-Xl-8Mt" secondAttribute="bottom" constant="20" id="voD-df-jAP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTxt" destination="5Ws-1Y-itz" id="dz1-xY-eoL"/>
+                        <outlet property="passwordTxt" destination="P9i-j4-AEj" id="qeG-ej-OI3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehr-Gb-72k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-506.39999999999998" y="88.605697151424295"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -315,30 +444,27 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClientInfoCell" rowHeight="350" id="dlV-G8-IB7" customClass="ClientInfoCell" customModule="HairCare" customModuleProvider="target">
                                         <frame key="frameInset" minY="28" width="343" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="dlV-G8-IB7" id="0d9-lg-zJ4">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dlV-G8-IB7" id="0d9-lg-zJ4">
                                             <frame key="frameInset" width="343" height="349"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="hairgirl" translatesAutoresizingMaskIntoConstraints="NO" id="YOt-11-fYC">
-                                                    <frame key="frameInset" minX="8" minY="8" width="160" height="160"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hairgirl" translatesAutoresizingMaskIntoConstraints="NO" id="YOt-11-fYC">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="160" id="dhW-uf-Oix"/>
                                                         <constraint firstAttribute="width" constant="160" id="hE3-GX-mxJ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="676-wb-riA">
-                                                    <frame key="frameInset" minX="8" minY="176" width="327" height="166"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="676-wb-riA">
                                                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="166" id="BOv-KA-vIS"/>
                                                     </constraints>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                                     <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZv-I5-3sn">
-                                                    <frame key="frameInset" minX="176" minY="8" width="159" height="38"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZv-I5-3sn">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38" id="8hK-jX-9rk"/>
                                                         <constraint firstAttribute="width" constant="159" id="iEN-iq-buh"/>
@@ -378,7 +504,7 @@
                                 <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xH-cZ-Nfk">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xH-cZ-Nfk" customClass="FancyButton" customModule="HairCare" customModuleProvider="target">
                                 <frame key="frameInset" minX="16" minY="582" width="343" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
@@ -469,7 +595,7 @@
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGJ-Nm-WSd">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGJ-Nm-WSd" customClass="FancyButton" customModule="HairCare" customModuleProvider="target">
                                 <frame key="frameInset" minX="16" minY="519" width="343" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
@@ -481,7 +607,7 @@
                                     <action selector="postBtnPressed:" destination="0qd-kf-cEp" eventType="touchUpInside" id="NSY-gK-T34"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCA-ng-KSH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCA-ng-KSH" customClass="FancyButton" customModule="HairCare" customModuleProvider="target">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6YX-ff-n3w"/>
