@@ -463,40 +463,38 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hairgirl" translatesAutoresizingMaskIntoConstraints="NO" id="YOt-11-fYC">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="160" id="dhW-uf-Oix"/>
-                                                        <constraint firstAttribute="width" constant="160" id="hE3-GX-mxJ"/>
+                                                        <constraint firstAttribute="height" constant="220" id="YvW-pf-JZK"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="676-wb-riA">
                                                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="166" id="BOv-KA-vIS"/>
+                                                        <constraint firstAttribute="height" constant="75" id="ayV-9A-Vx2"/>
                                                     </constraints>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZv-I5-3sn">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08/09/16" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZv-I5-3sn">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="38" id="8hK-jX-9rk"/>
-                                                        <constraint firstAttribute="width" constant="159" id="iEN-iq-buh"/>
+                                                        <constraint firstAttribute="height" constant="25" id="qrG-KE-BK5"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="24"/>
                                                     <color key="textColor" red="0.37647058820000001" green="0.16862745100000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="YOt-11-fYC" firstAttribute="leading" secondItem="0d9-lg-zJ4" secondAttribute="leadingMargin" id="0Sn-dO-onc"/>
-                                                <constraint firstItem="676-wb-riA" firstAttribute="trailing" secondItem="0d9-lg-zJ4" secondAttribute="trailingMargin" id="1oW-jD-3ob"/>
-                                                <constraint firstItem="676-wb-riA" firstAttribute="leading" secondItem="0d9-lg-zJ4" secondAttribute="leadingMargin" id="Ij8-18-15S"/>
-                                                <constraint firstItem="rZv-I5-3sn" firstAttribute="top" secondItem="0d9-lg-zJ4" secondAttribute="topMargin" id="LYf-uG-x9Q"/>
-                                                <constraint firstItem="676-wb-riA" firstAttribute="bottom" secondItem="0d9-lg-zJ4" secondAttribute="bottomMargin" id="XwX-GX-92Q"/>
-                                                <constraint firstItem="676-wb-riA" firstAttribute="top" secondItem="YOt-11-fYC" secondAttribute="bottom" constant="8" id="Ywx-uY-jsH"/>
-                                                <constraint firstItem="rZv-I5-3sn" firstAttribute="leading" secondItem="YOt-11-fYC" secondAttribute="trailing" constant="8" id="fT4-IC-BYF"/>
-                                                <constraint firstItem="YOt-11-fYC" firstAttribute="top" secondItem="0d9-lg-zJ4" secondAttribute="topMargin" id="lvO-bK-p1r"/>
-                                                <constraint firstItem="rZv-I5-3sn" firstAttribute="trailing" secondItem="0d9-lg-zJ4" secondAttribute="trailingMargin" id="uc3-Jf-hF1"/>
+                                                <constraint firstItem="676-wb-riA" firstAttribute="leading" secondItem="0d9-lg-zJ4" secondAttribute="leading" constant="8" id="3wk-Kv-DaO"/>
+                                                <constraint firstItem="rZv-I5-3sn" firstAttribute="top" secondItem="YOt-11-fYC" secondAttribute="bottom" constant="8" id="9Qy-vg-bRs"/>
+                                                <constraint firstItem="rZv-I5-3sn" firstAttribute="leading" secondItem="0d9-lg-zJ4" secondAttribute="leadingMargin" id="POz-HY-KMj"/>
+                                                <constraint firstItem="YOt-11-fYC" firstAttribute="top" secondItem="0d9-lg-zJ4" secondAttribute="topMargin" id="Pxn-RL-Ca1"/>
+                                                <constraint firstItem="rZv-I5-3sn" firstAttribute="trailing" secondItem="0d9-lg-zJ4" secondAttribute="trailingMargin" id="Vj2-nT-Ov5"/>
+                                                <constraint firstAttribute="trailing" secondItem="676-wb-riA" secondAttribute="trailing" constant="8" id="Wgr-Fq-0Rq"/>
+                                                <constraint firstItem="YOt-11-fYC" firstAttribute="leading" secondItem="0d9-lg-zJ4" secondAttribute="leadingMargin" id="gcq-Ie-6gK"/>
+                                                <constraint firstItem="YOt-11-fYC" firstAttribute="trailing" secondItem="0d9-lg-zJ4" secondAttribute="trailingMargin" id="mlQ-eP-7jE"/>
+                                                <constraint firstItem="676-wb-riA" firstAttribute="top" secondItem="rZv-I5-3sn" secondAttribute="bottom" constant="8" id="x0W-wA-ety"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>

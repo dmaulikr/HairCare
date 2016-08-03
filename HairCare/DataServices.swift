@@ -25,9 +25,9 @@ class DataServices {
         return _REF_USER
     }
     
-    func createFirebaseDBUser(uid: String, name: String) {
-//        REF_USER.child(uid).updateChildValues(userData)
-        REF_USER.child(uid).value(forKey: name)
+    func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>) {
+       
+        REF_USER.child(uid).updateChildValues(userData)
     }
 //
 //    var loadedPosts = [ClientInfo]()

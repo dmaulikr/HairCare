@@ -44,7 +44,8 @@ class LoginVC: UIViewController {
                 if error == nil {
                     print("NATE: User authenticated with Firebase")
                     if let user = user {
-                        self.completeSignIn(id: user.uid)
+                        let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
@@ -53,7 +54,8 @@ class LoginVC: UIViewController {
                         } else {
                             print("Successfully created user")
                             if let user = user {
-                                self.completeSignIn(id: user.uid)
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
                         
@@ -63,10 +65,11 @@ class LoginVC: UIViewController {
         }
     }
     
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DataServices.instance.createFirebaseDBUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
         print("NATE: data saved to keychain \(keychainResult)")
-//        performSegue(withIdentifier: "MainVC", sender: nil)
+
         if let main = self.storyboard?.instantiateViewController(withIdentifier: "MainVC"){
             main.modalTransitionStyle = .crossDissolve
             present(main, animated: true, completion: nil)
