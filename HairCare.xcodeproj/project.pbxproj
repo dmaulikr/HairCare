@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		96B1C395836EAF06989737AE /* Pods_HairCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E83A458DC6FED64E174CA9 /* Pods_HairCare.framework */; };
+		C66E77511D518BAB00848BF8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E77501D518BAB00848BF8 /* Constants.swift */; };
 		C695E0511D4DE6B6009947A7 /* ClientInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E0501D4DE6B6009947A7 /* ClientInfoCell.swift */; };
 		C695E0531D4DF5BC009947A7 /* addingClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E0521D4DF5BC009947A7 /* addingClientVC.swift */; };
 		C695E0561D4DFBD9009947A7 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E0551D4DFBD9009947A7 /* DataServices.swift */; };
@@ -16,13 +17,11 @@
 		C695E05C1D5032E7009947A7 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E05B1D5032E7009947A7 /* FancyView.swift */; };
 		C695E05E1D5034E9009947A7 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E05D1D5034E9009947A7 /* FancyButton.swift */; };
 		C6E88A811D4D85C5002B1E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88A801D4D85C5002B1E2B /* AppDelegate.swift */; };
-		C6E88A831D4D85C5002B1E2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88A821D4D85C5002B1E2B /* ViewController.swift */; };
-		C6E88A861D4D85C5002B1E2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E88A841D4D85C5002B1E2B /* Main.storyboard */; };
+		C6E88A831D4D85C5002B1E2B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88A821D4D85C5002B1E2B /* MainVC.swift */; };
+		C6E88A861D4D85C5002B1E2B /* Master.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E88A841D4D85C5002B1E2B /* Master.storyboard */; };
 		C6E88A891D4D85C5002B1E2B /* HairCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6E88A871D4D85C5002B1E2B /* HairCare.xcdatamodeld */; };
 		C6E88A8B1D4D85C5002B1E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E88A8A1D4D85C5002B1E2B /* Assets.xcassets */; };
 		C6E88A8E1D4D85C5002B1E2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E88A8C1D4D85C5002B1E2B /* LaunchScreen.storyboard */; };
-		C6E88A991D4D85C5002B1E2B /* HairCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88A981D4D85C5002B1E2B /* HairCareTests.swift */; };
-		C6E88AA41D4D85C5002B1E2B /* HairCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88AA31D4D85C5002B1E2B /* HairCareUITests.swift */; };
 		C6E88AB51D4DB551002B1E2B /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88AB41D4DB551002B1E2B /* Client.swift */; };
 		C6E88AB71D4DBD01002B1E2B /* ClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88AB61D4DBD01002B1E2B /* ClientVC.swift */; };
 		C6E88AB91D4DC2AA002B1E2B /* ClientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88AB81D4DC2AA002B1E2B /* ClientInfo.swift */; };
@@ -31,27 +30,12 @@
 		C6E88AC01D4DDE68002B1E2B /* ClientInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88ABF1D4DDE68002B1E2B /* ClientInfoVC.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C6E88A951D4D85C5002B1E2B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C6E88A751D4D85C5002B1E2B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C6E88A7C1D4D85C5002B1E2B;
-			remoteInfo = HairCare;
-		};
-		C6E88AA01D4D85C5002B1E2B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C6E88A751D4D85C5002B1E2B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C6E88A7C1D4D85C5002B1E2B;
-			remoteInfo = HairCare;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		20E83A458DC6FED64E174CA9 /* Pods_HairCare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HairCare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E526B3BDE84F1D19E62089 /* Pods-HairCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-HairCare/Pods-HairCare.release.xcconfig"; sourceTree = "<group>"; };
 		8B3E4D82CC30C15941250D6D /* Pods-HairCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairCare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HairCare/Pods-HairCare.debug.xcconfig"; sourceTree = "<group>"; };
+		C66E774F1D51866100848BF8 /* HairCare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HairCare.entitlements; sourceTree = "<group>"; };
+		C66E77501D518BAB00848BF8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C695E0501D4DE6B6009947A7 /* ClientInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientInfoCell.swift; sourceTree = "<group>"; };
 		C695E0521D4DF5BC009947A7 /* addingClientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addingClientVC.swift; sourceTree = "<group>"; };
 		C695E0551D4DFBD9009947A7 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
@@ -61,18 +45,12 @@
 		C695E05D1D5034E9009947A7 /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 		C6E88A7D1D4D85C5002B1E2B /* HairCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HairCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E88A801D4D85C5002B1E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C6E88A821D4D85C5002B1E2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C6E88A851D4D85C5002B1E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C6E88A821D4D85C5002B1E2B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		C6E88A851D4D85C5002B1E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Master.storyboard; sourceTree = "<group>"; };
 		C6E88A881D4D85C5002B1E2B /* HairCare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HairCare.xcdatamodel; sourceTree = "<group>"; };
 		C6E88A8A1D4D85C5002B1E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6E88A8D1D4D85C5002B1E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6E88A8F1D4D85C5002B1E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6E88A941D4D85C5002B1E2B /* HairCareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HairCareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6E88A981D4D85C5002B1E2B /* HairCareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairCareTests.swift; sourceTree = "<group>"; };
-		C6E88A9A1D4D85C5002B1E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6E88A9F1D4D85C5002B1E2B /* HairCareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HairCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6E88AA31D4D85C5002B1E2B /* HairCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairCareUITests.swift; sourceTree = "<group>"; };
-		C6E88AA51D4D85C5002B1E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6E88AB41D4DB551002B1E2B /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		C6E88AB61D4DBD01002B1E2B /* ClientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientVC.swift; sourceTree = "<group>"; };
 		C6E88AB81D4DC2AA002B1E2B /* ClientInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientInfo.swift; sourceTree = "<group>"; };
@@ -90,20 +68,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6E88A911D4D85C5002B1E2B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6E88A9C1D4D85C5002B1E2B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -111,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				C695E0551D4DFBD9009947A7 /* DataServices.swift */,
+				C66E77501D518BAB00848BF8 /* Constants.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -119,8 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				C6E88A7F1D4D85C5002B1E2B /* HairCare */,
-				C6E88A971D4D85C5002B1E2B /* HairCareTests */,
-				C6E88AA21D4D85C5002B1E2B /* HairCareUITests */,
 				C6E88A7E1D4D85C5002B1E2B /* Products */,
 				D1A9C3ADF9591FB34F6ABA9A /* Pods */,
 				EC51F7CFA028348239B2FDD7 /* Frameworks */,
@@ -131,8 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				C6E88A7D1D4D85C5002B1E2B /* HairCare.app */,
-				C6E88A941D4D85C5002B1E2B /* HairCareTests.xctest */,
-				C6E88A9F1D4D85C5002B1E2B /* HairCareUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +101,7 @@
 		C6E88A7F1D4D85C5002B1E2B /* HairCare */ = {
 			isa = PBXGroup;
 			children = (
+				C66E774F1D51866100848BF8 /* HairCare.entitlements */,
 				C695E0541D4DFBBF009947A7 /* Services */,
 				C6E88AB31D4DB52A002B1E2B /* Model */,
 				C6E88AB21D4DB524002B1E2B /* View */,
@@ -151,24 +113,6 @@
 				C6E88A871D4D85C5002B1E2B /* HairCare.xcdatamodeld */,
 			);
 			path = HairCare;
-			sourceTree = "<group>";
-		};
-		C6E88A971D4D85C5002B1E2B /* HairCareTests */ = {
-			isa = PBXGroup;
-			children = (
-				C6E88A981D4D85C5002B1E2B /* HairCareTests.swift */,
-				C6E88A9A1D4D85C5002B1E2B /* Info.plist */,
-			);
-			path = HairCareTests;
-			sourceTree = "<group>";
-		};
-		C6E88AA21D4D85C5002B1E2B /* HairCareUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C6E88AA31D4D85C5002B1E2B /* HairCareUITests.swift */,
-				C6E88AA51D4D85C5002B1E2B /* Info.plist */,
-			);
-			path = HairCareUITests;
 			sourceTree = "<group>";
 		};
 		C6E88AB11D4DB51B002B1E2B /* Controller */ = {
@@ -185,11 +129,11 @@
 			isa = PBXGroup;
 			children = (
 				C6E88ABD1D4DD1B7002B1E2B /* addClientVC.swift */,
-				C6E88A821D4D85C5002B1E2B /* ViewController.swift */,
+				C6E88A821D4D85C5002B1E2B /* MainVC.swift */,
 				C6E88AB61D4DBD01002B1E2B /* ClientVC.swift */,
 				C6E88ABF1D4DDE68002B1E2B /* ClientInfoVC.swift */,
 				C695E0521D4DF5BC009947A7 /* addingClientVC.swift */,
-				C6E88A841D4D85C5002B1E2B /* Main.storyboard */,
+				C6E88A841D4D85C5002B1E2B /* Master.storyboard */,
 				C695E0591D5032A9009947A7 /* LoginVC.swift */,
 			);
 			name = View;
@@ -254,42 +198,6 @@
 			productReference = C6E88A7D1D4D85C5002B1E2B /* HairCare.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C6E88A931D4D85C5002B1E2B /* HairCareTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C6E88AAB1D4D85C5002B1E2B /* Build configuration list for PBXNativeTarget "HairCareTests" */;
-			buildPhases = (
-				C6E88A901D4D85C5002B1E2B /* Sources */,
-				C6E88A911D4D85C5002B1E2B /* Frameworks */,
-				C6E88A921D4D85C5002B1E2B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C6E88A961D4D85C5002B1E2B /* PBXTargetDependency */,
-			);
-			name = HairCareTests;
-			productName = HairCareTests;
-			productReference = C6E88A941D4D85C5002B1E2B /* HairCareTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C6E88A9E1D4D85C5002B1E2B /* HairCareUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C6E88AAE1D4D85C5002B1E2B /* Build configuration list for PBXNativeTarget "HairCareUITests" */;
-			buildPhases = (
-				C6E88A9B1D4D85C5002B1E2B /* Sources */,
-				C6E88A9C1D4D85C5002B1E2B /* Frameworks */,
-				C6E88A9D1D4D85C5002B1E2B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C6E88AA11D4D85C5002B1E2B /* PBXTargetDependency */,
-			);
-			name = HairCareUITests;
-			productName = HairCareUITests;
-			productReference = C6E88A9F1D4D85C5002B1E2B /* HairCareUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -305,20 +213,11 @@
 						DevelopmentTeam = L9N5DJLS38;
 						DevelopmentTeamName = "Nathan Brewer (Personal Team)";
 						ProvisioningStyle = Automatic;
-					};
-					C6E88A931D4D85C5002B1E2B = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = L9N5DJLS38;
-						DevelopmentTeamName = "Nathan Brewer (Personal Team)";
-						ProvisioningStyle = Automatic;
-						TestTargetID = C6E88A7C1D4D85C5002B1E2B;
-					};
-					C6E88A9E1D4D85C5002B1E2B = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = L9N5DJLS38;
-						DevelopmentTeamName = "Nathan Brewer (Personal Team)";
-						ProvisioningStyle = Automatic;
-						TestTargetID = C6E88A7C1D4D85C5002B1E2B;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -336,8 +235,6 @@
 			projectRoot = "";
 			targets = (
 				C6E88A7C1D4D85C5002B1E2B /* HairCare */,
-				C6E88A931D4D85C5002B1E2B /* HairCareTests */,
-				C6E88A9E1D4D85C5002B1E2B /* HairCareUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -349,22 +246,8 @@
 			files = (
 				C6E88A8E1D4D85C5002B1E2B /* LaunchScreen.storyboard in Resources */,
 				C6E88A8B1D4D85C5002B1E2B /* Assets.xcassets in Resources */,
-				C6E88A861D4D85C5002B1E2B /* Main.storyboard in Resources */,
+				C6E88A861D4D85C5002B1E2B /* Master.storyboard in Resources */,
 				C695E0581D4F0061009947A7 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6E88A921D4D85C5002B1E2B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6E88A9D1D4D85C5002B1E2B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +308,12 @@
 			files = (
 				C6E88ABC1D4DC85E002B1E2B /* ClientCell.swift in Sources */,
 				C695E0531D4DF5BC009947A7 /* addingClientVC.swift in Sources */,
-				C6E88A831D4D85C5002B1E2B /* ViewController.swift in Sources */,
+				C6E88A831D4D85C5002B1E2B /* MainVC.swift in Sources */,
 				C695E0561D4DFBD9009947A7 /* DataServices.swift in Sources */,
 				C6E88AB91D4DC2AA002B1E2B /* ClientInfo.swift in Sources */,
 				C6E88A891D4D85C5002B1E2B /* HairCare.xcdatamodeld in Sources */,
 				C6E88AB71D4DBD01002B1E2B /* ClientVC.swift in Sources */,
+				C66E77511D518BAB00848BF8 /* Constants.swift in Sources */,
 				C6E88ABE1D4DD1B7002B1E2B /* addClientVC.swift in Sources */,
 				C6E88AC01D4DDE68002B1E2B /* ClientInfoVC.swift in Sources */,
 				C695E05E1D5034E9009947A7 /* FancyButton.swift in Sources */,
@@ -441,44 +325,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6E88A901D4D85C5002B1E2B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C6E88A991D4D85C5002B1E2B /* HairCareTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6E88A9B1D4D85C5002B1E2B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C6E88AA41D4D85C5002B1E2B /* HairCareUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		C6E88A961D4D85C5002B1E2B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C6E88A7C1D4D85C5002B1E2B /* HairCare */;
-			targetProxy = C6E88A951D4D85C5002B1E2B /* PBXContainerItemProxy */;
-		};
-		C6E88AA11D4D85C5002B1E2B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C6E88A7C1D4D85C5002B1E2B /* HairCare */;
-			targetProxy = C6E88AA01D4D85C5002B1E2B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		C6E88A841D4D85C5002B1E2B /* Main.storyboard */ = {
+		C6E88A841D4D85C5002B1E2B /* Master.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C6E88A851D4D85C5002B1E2B /* Base */,
 			);
-			name = Main.storyboard;
+			name = Master.storyboard;
 			sourceTree = "<group>";
 		};
 		C6E88A8C1D4D85C5002B1E2B /* LaunchScreen.storyboard */ = {
@@ -530,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -572,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -585,7 +440,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B3E4D82CC30C15941250D6D /* Pods-HairCare.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HairCare/HairCare.entitlements;
 				INFOPLIST_FILE = HairCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathan.HairCare;
@@ -598,62 +455,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24E526B3BDE84F1D19E62089 /* Pods-HairCare.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HairCare/HairCare.entitlements;
 				INFOPLIST_FILE = HairCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathan.HairCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		C6E88AAC1D4D85C5002B1E2B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = HairCareTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nathan.HairCareTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HairCare.app/HairCare";
-			};
-			name = Debug;
-		};
-		C6E88AAD1D4D85C5002B1E2B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = HairCareTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nathan.HairCareTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HairCare.app/HairCare";
-			};
-			name = Release;
-		};
-		C6E88AAF1D4D85C5002B1E2B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = HairCareUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nathan.HairCareUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = HairCare;
-			};
-			name = Debug;
-		};
-		C6E88AB01D4D85C5002B1E2B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = HairCareUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nathan.HairCareUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = HairCare;
 			};
 			name = Release;
 		};
@@ -674,24 +483,6 @@
 			buildConfigurations = (
 				C6E88AA91D4D85C5002B1E2B /* Debug */,
 				C6E88AAA1D4D85C5002B1E2B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6E88AAB1D4D85C5002B1E2B /* Build configuration list for PBXNativeTarget "HairCareTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C6E88AAC1D4D85C5002B1E2B /* Debug */,
-				C6E88AAD1D4D85C5002B1E2B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6E88AAE1D4D85C5002B1E2B /* Build configuration list for PBXNativeTarget "HairCareUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C6E88AAF1D4D85C5002B1E2B /* Debug */,
-				C6E88AB01D4D85C5002B1E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
