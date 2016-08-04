@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		96B1C395836EAF06989737AE /* Pods_HairCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E83A458DC6FED64E174CA9 /* Pods_HairCare.framework */; };
 		C66E77511D518BAB00848BF8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E77501D518BAB00848BF8 /* Constants.swift */; };
+		C66E77531D52DCB200848BF8 /* FirePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E77521D52DCB200848BF8 /* FirePost.swift */; };
 		C695E0511D4DE6B6009947A7 /* ClientInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E0501D4DE6B6009947A7 /* ClientInfoCell.swift */; };
 		C695E0531D4DF5BC009947A7 /* addingClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E0521D4DF5BC009947A7 /* addingClientVC.swift */; };
 		C695E0561D4DFBD9009947A7 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E0551D4DFBD9009947A7 /* DataServices.swift */; };
@@ -36,6 +37,7 @@
 		8B3E4D82CC30C15941250D6D /* Pods-HairCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairCare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HairCare/Pods-HairCare.debug.xcconfig"; sourceTree = "<group>"; };
 		C66E774F1D51866100848BF8 /* HairCare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HairCare.entitlements; sourceTree = "<group>"; };
 		C66E77501D518BAB00848BF8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C66E77521D52DCB200848BF8 /* FirePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirePost.swift; sourceTree = "<group>"; };
 		C695E0501D4DE6B6009947A7 /* ClientInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientInfoCell.swift; sourceTree = "<group>"; };
 		C695E0521D4DF5BC009947A7 /* addingClientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addingClientVC.swift; sourceTree = "<group>"; };
 		C695E0551D4DFBD9009947A7 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				C695E0501D4DE6B6009947A7 /* ClientInfoCell.swift */,
 				C6E88AB81D4DC2AA002B1E2B /* ClientInfo.swift */,
 				C6E88ABA1D4DC7F9002B1E2B /* ClientPage */,
+				C66E77521D52DCB200848BF8 /* FirePost.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				C6E88AC01D4DDE68002B1E2B /* ClientInfoVC.swift in Sources */,
 				C695E05E1D5034E9009947A7 /* FancyButton.swift in Sources */,
 				C695E05A1D5032A9009947A7 /* LoginVC.swift in Sources */,
+				C66E77531D52DCB200848BF8 /* FirePost.swift in Sources */,
 				C6E88AB51D4DB551002B1E2B /* Client.swift in Sources */,
 				C695E0511D4DE6B6009947A7 /* ClientInfoCell.swift in Sources */,
 				C695E05C1D5032E7009947A7 /* FancyView.swift in Sources */,

@@ -14,12 +14,14 @@ class MainVC: UIViewController {
     
     @IBOutlet weak var addClientBtn: UIButton!
     
+        
 //    let storage = FIRStorage.storage()
 //    let storageRef = FIRStorage.storage().reference(forURL: "haircare-e1604.firebaseio.com")
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+               
     }
     
     @IBAction func signOutTapped(_ sender: AnyObject) {

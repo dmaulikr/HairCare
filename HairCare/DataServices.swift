@@ -11,11 +11,16 @@ import Firebase
 
 let DB_BASE = FIRDatabase.database().reference()
 
+
+
 class DataServices {
     static let instance = DataServices()
     
     private var _REF_BASE = DB_BASE
     private var _REF_USER = DB_BASE.child("user")
+    var REF_CLIENT = FIRDatabase.database().reference(fromURL: "https://haircare-e1604.firebaseio.com/user/fedilh3/client")
+    
+    
     
     var REF_BASE: FIRDatabaseReference {
         return _REF_BASE
@@ -24,6 +29,7 @@ class DataServices {
     var REF_USER: FIRDatabaseReference {
         return _REF_USER
     }
+    
     
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>) {
        

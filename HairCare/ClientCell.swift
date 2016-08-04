@@ -17,8 +17,8 @@ class ClientCell: UITableViewCell {
         // Initialization code
     }
     
-    func configureCell(client: Client) {
-        nameLabel.text = client.name
+    func configureCell(post: FireClient) {
+        nameLabel.text = post.name
     }
 
 }

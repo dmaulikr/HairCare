@@ -20,6 +20,13 @@ class ClientInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         tableView.delegate = self
         tableView.dataSource = self
         
+//        ===Observer needs to be on ClientInfoVC and listen for client info added=====
+//        ==============This listens for changes in the post======================
+//        DataServices.instance.REF_USER.observe(.value, with: { (snapshot) in
+//            print(snapshot.value) <- this prints the details of the branch
+//          ====================================
+//        })
+        
         
     }
     

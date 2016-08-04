@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Firebase
+import SwiftKeychainWrapper
 
 class ClientVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var clients = [Client]()
+    var posts = [FireClient]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,23 @@ class ClientVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
+//        ======Observer needs to be on ClientVC and listen for new clients added=====
+        DataServices.instance.REF_CLIENT.observe(.value, with: { (snapshot) in
+            
+            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshot {
+                    print("SNAP: \(snap)")
+                    if let postDict = snap.value as? Dictionary<String,String> {
+                        let key = snap.key
+                        let post = FireClient(postKey: key, postData: postDict)
+                        self.posts.append(post)
+                        print("JJJ: \(post.name)")
+                    }
+                }
+            }
+            
+        })
+
 
     }
     
@@ -29,14 +48,14 @@ class ClientVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let client = clients[indexPath.row]
+        let post = posts[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ClientCell") as? ClientCell {
-            cell.configureCell(client: client)
+            cell.configureCell(post: post)
             return cell
             
         } else {
             let cell = ClientCell()
-            cell.configureCell(client: client)
+            cell.configureCell(post: post)
             return cell
         }
         
@@ -47,7 +66,7 @@ class ClientVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return clients.count
+        return posts.count
     }
     
 }
