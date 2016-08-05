@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class ClientInfoCell: UITableViewCell {
     
-    @IBOutlet weak var clientName: UILabel!
+//    @IBOutlet weak var clientName: UILabel!
     @IBOutlet weak var clientImage: UIImageView!
     @IBOutlet weak var dateText: UILabel!
     @IBOutlet weak var clientDesc: UITextView!
@@ -21,11 +22,30 @@ class ClientInfoCell: UITableViewCell {
         
     }
     
-//    func configureCell(info: ClientInfo) {
+    func configureCell(info: FireClient, img: UIImage? = nil) {
 //        clientName.text = info.name
-//        clientImage.image = DataServices.instance.imageForPath(path: info.imagePath!)
-//        dateText.text = info.currentDate
-//        clientDesc.text = info.productInfo
-//    }
+        dateText.text = info.date
+        clientDesc.text = info.description
+        
+        if img != nil {
+            clientImage.image = img
+        } else {
+            let ref = STORAGE_BASE
+//            reference(forURL: info.imageUrl)
+            ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
+                if error != nil {
+                    print("NATE: didnt download image from Firebase")
+                } else {
+                    print("image downloaded")
+                    if let imgData = data {
+                        if let img = UIImage(data: imgData) {
+                            self.clientImage.image = img
+                            ClientInfoVC.imageCache.setObject(img, forKey: info.imageUrl)
+                        }
+                    }
+                }
+            })
+        }
+    }
 
 }

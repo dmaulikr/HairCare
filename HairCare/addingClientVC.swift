@@ -26,11 +26,13 @@ class addingClientinfoVC: UIViewController, UIImagePickerControllerDelegate, UIN
         cancelBtn.layer.cornerRadius = 25
         
         imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
         imagePicker.delegate = self
 
         
     }
     @IBAction func selectPicture(_ sender: UIButton) {
+        
         sender.setTitle("", for: .normal)
         present(imagePicker, animated: true, completion: nil)
     }
@@ -45,12 +47,13 @@ class addingClientinfoVC: UIViewController, UIImagePickerControllerDelegate, UIN
 //            let post = ClientInfo(name: "", date: date, info: desc, image: imgPath)
 //            DataServices.instance.addPost(client: post)
         
-            
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            clientImage.image = image
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
     
-//    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo image: UIImage) {
-//        imagePicker.dismiss(animated: true, completion: nil)
-//        clientImage.image = image
-//    }
     @IBAction func cancelPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }

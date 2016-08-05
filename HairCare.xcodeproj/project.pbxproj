@@ -10,6 +10,7 @@
 		96B1C395836EAF06989737AE /* Pods_HairCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E83A458DC6FED64E174CA9 /* Pods_HairCare.framework */; };
 		C66E77511D518BAB00848BF8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E77501D518BAB00848BF8 /* Constants.swift */; };
 		C66E77531D52DCB200848BF8 /* FirePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E77521D52DCB200848BF8 /* FirePost.swift */; };
+		C66E77551D53C7EA00848BF8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E77541D53C7EA00848BF8 /* CircleView.swift */; };
 		C695E0511D4DE6B6009947A7 /* ClientInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E0501D4DE6B6009947A7 /* ClientInfoCell.swift */; };
 		C695E0531D4DF5BC009947A7 /* addingClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E0521D4DF5BC009947A7 /* addingClientVC.swift */; };
 		C695E0561D4DFBD9009947A7 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E0551D4DFBD9009947A7 /* DataServices.swift */; };
@@ -19,7 +20,7 @@
 		C695E05E1D5034E9009947A7 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C695E05D1D5034E9009947A7 /* FancyButton.swift */; };
 		C6E88A811D4D85C5002B1E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88A801D4D85C5002B1E2B /* AppDelegate.swift */; };
 		C6E88A831D4D85C5002B1E2B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E88A821D4D85C5002B1E2B /* MainVC.swift */; };
-		C6E88A861D4D85C5002B1E2B /* Master.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E88A841D4D85C5002B1E2B /* Master.storyboard */; };
+		C6E88A861D4D85C5002B1E2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E88A841D4D85C5002B1E2B /* Main.storyboard */; };
 		C6E88A891D4D85C5002B1E2B /* HairCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6E88A871D4D85C5002B1E2B /* HairCare.xcdatamodeld */; };
 		C6E88A8B1D4D85C5002B1E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E88A8A1D4D85C5002B1E2B /* Assets.xcassets */; };
 		C6E88A8E1D4D85C5002B1E2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E88A8C1D4D85C5002B1E2B /* LaunchScreen.storyboard */; };
@@ -38,6 +39,7 @@
 		C66E774F1D51866100848BF8 /* HairCare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HairCare.entitlements; sourceTree = "<group>"; };
 		C66E77501D518BAB00848BF8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C66E77521D52DCB200848BF8 /* FirePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirePost.swift; sourceTree = "<group>"; };
+		C66E77541D53C7EA00848BF8 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		C695E0501D4DE6B6009947A7 /* ClientInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientInfoCell.swift; sourceTree = "<group>"; };
 		C695E0521D4DF5BC009947A7 /* addingClientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addingClientVC.swift; sourceTree = "<group>"; };
 		C695E0551D4DFBD9009947A7 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
@@ -48,7 +50,7 @@
 		C6E88A7D1D4D85C5002B1E2B /* HairCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HairCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E88A801D4D85C5002B1E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6E88A821D4D85C5002B1E2B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		C6E88A851D4D85C5002B1E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Master.storyboard; sourceTree = "<group>"; };
+		C6E88A851D4D85C5002B1E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6E88A881D4D85C5002B1E2B /* HairCare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HairCare.xcdatamodel; sourceTree = "<group>"; };
 		C6E88A8A1D4D85C5002B1E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6E88A8D1D4D85C5002B1E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				C6E88A801D4D85C5002B1E2B /* AppDelegate.swift */,
 				C695E05B1D5032E7009947A7 /* FancyView.swift */,
 				C695E05D1D5034E9009947A7 /* FancyButton.swift */,
+				C66E77541D53C7EA00848BF8 /* CircleView.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -135,7 +138,7 @@
 				C6E88AB61D4DBD01002B1E2B /* ClientVC.swift */,
 				C6E88ABF1D4DDE68002B1E2B /* ClientInfoVC.swift */,
 				C695E0521D4DF5BC009947A7 /* addingClientVC.swift */,
-				C6E88A841D4D85C5002B1E2B /* Master.storyboard */,
+				C6E88A841D4D85C5002B1E2B /* Main.storyboard */,
 				C695E0591D5032A9009947A7 /* LoginVC.swift */,
 			);
 			name = View;
@@ -249,7 +252,7 @@
 			files = (
 				C6E88A8E1D4D85C5002B1E2B /* LaunchScreen.storyboard in Resources */,
 				C6E88A8B1D4D85C5002B1E2B /* Assets.xcassets in Resources */,
-				C6E88A861D4D85C5002B1E2B /* Master.storyboard in Resources */,
+				C6E88A861D4D85C5002B1E2B /* Main.storyboard in Resources */,
 				C695E0581D4F0061009947A7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66E77551D53C7EA00848BF8 /* CircleView.swift in Sources */,
 				C6E88ABC1D4DC85E002B1E2B /* ClientCell.swift in Sources */,
 				C695E0531D4DF5BC009947A7 /* addingClientVC.swift in Sources */,
 				C6E88A831D4D85C5002B1E2B /* MainVC.swift in Sources */,
@@ -332,12 +336,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C6E88A841D4D85C5002B1E2B /* Master.storyboard */ = {
+		C6E88A841D4D85C5002B1E2B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C6E88A851D4D85C5002B1E2B /* Base */,
 			);
-			name = Master.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		C6E88A8C1D4D85C5002B1E2B /* LaunchScreen.storyboard */ = {

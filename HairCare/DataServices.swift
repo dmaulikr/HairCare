@@ -10,15 +10,20 @@ import Foundation
 import Firebase
 
 let DB_BASE = FIRDatabase.database().reference()
+let STORAGE_BASE = FIRStorage.storage().reference().child("post-pics")
 
 
 
 class DataServices {
     static let instance = DataServices()
     
+    // DB rreferences
     private var _REF_BASE = DB_BASE
     private var _REF_USER = DB_BASE.child("user")
     var REF_CLIENT = FIRDatabase.database().reference(fromURL: "https://haircare-e1604.firebaseio.com/user/fedilh3/client")
+    
+    //Strorage references
+    var REF_IMAGES = STORAGE_BASE.child("post-pics")
     
     
     

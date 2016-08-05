@@ -30,13 +30,6 @@ class LoginVC: UIViewController {
             
         }
     }
-//    override func viewDidAppear(animated: Bool) {
-//             if let _ = KeychainWrapper.stringForKey(KEY_UID) {
-//                print("NATE it worked")
-//                performSegue(withIdentifier: "MainVC", sender: nil)
-//            }
-//
-//        }
     
     @IBAction func enterHerePressed(_ sender: FancyButton) {
         if let email = emailTxt.text, let pwd = passwordTxt.text {
@@ -73,7 +66,6 @@ class LoginVC: UIViewController {
         if let main = self.storyboard?.instantiateViewController(withIdentifier: "MainVC"){
             main.modalTransitionStyle = .crossDissolve
             present(main, animated: true, completion: nil)
-            }
-        
+        }
     }
 }
